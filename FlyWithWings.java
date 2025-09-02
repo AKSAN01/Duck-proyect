@@ -1,4 +1,4 @@
-public class FlyWithWings implements Duck.FlyBehavior {
+public class FlyWithWings implements FlyBehavior {
     @Override
     public void fly() {
         System.out.println("estoy volando mi papa!!!!");

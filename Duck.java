@@ -1,10 +1,8 @@
 public abstract class Duck {
-
     protected FlyBehavior flyBehavior;
     protected QuackBehavior quackBehavior;
 
-    public Duck() {
-    }
+    public Duck() {}
 
     public abstract void display();
 
@@ -20,14 +18,12 @@ public abstract class Duck {
         System.out.println("All ducks float, even decoys!");
     }
 
-    public interface FlyBehavior {
-        public void fly();
+    // Métodos para cambiar comportamiento en tiempo de ejecución
+    public void setFlyBehavior(FlyBehavior fb) {
+        this.flyBehavior = fb;
+    }
 
+    public void setQuackBehavior(QuackBehavior qb) {
+        this.quackBehavior = qb;
+    }
 }
-
-    public interface QuackBehavior {
-        public void quack();
-}
-}
-
-
